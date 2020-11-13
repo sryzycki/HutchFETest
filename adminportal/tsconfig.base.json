@@ -1,0 +1,46 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@hutch/profile/feature-search": [
+        "libs/profile/feature-search/src/index.ts"
+      ],
+      "@hutch/profile/data-access": ["libs/profile/data-access/src/index.ts"],
+      "@hutch/shared/ui-layout": ["libs/shared/ui-layout/src/index.ts"],
+      "@hutch/api/user-profile": ["libs/api/user-profile/src/index.ts"],
+      "@hutch/profile/ui-search": ["libs/profile/ui-search/src/index.ts"],
+      "@hutch/profile/domain": ["libs/profile/domain/src/index.ts"],
+      "@hutch/shared/ui-spinner": ["libs/shared/ui-spinner/src/index.ts"],
+      "@hutch/shared/util-math": ["libs/shared/util-math/src/index.ts"],
+      "@hutch/shared/util-error": ["libs/shared/util-error/src/index.ts"],
+      "@hutch/shared/ui-error": ["libs/shared/ui-error/src/index.ts"],
+      "@hutch/profile/feature-shell": [
+        "libs/profile/feature-shell/src/index.ts"
+      ],
+      "@hutch/auth/feature-login": ["libs/auth/feature-login/src/index.ts"],
+      "@hutch/auth/feature-shell": ["libs/auth/feature-shell/src/index.ts"],
+      "@hutch/auth/util-jwt": ["libs/auth/util-jwt/src/index.ts"],
+      "@hutch/shared/feature-header": [
+        "libs/shared/feature-header/src/index.ts"
+      ],
+      "@hutch/shared/feature-versioning": [
+        "libs/shared/feature-versioning/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

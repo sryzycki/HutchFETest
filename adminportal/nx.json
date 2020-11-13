@@ -1,0 +1,85 @@
+{
+  "npmScope": "hutch",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "admin-portal": {
+      "tags": []
+    },
+    "admin-portal-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin-portal"]
+    },
+    "api": {
+      "tags": []
+    },
+    "profile-feature-search": {
+      "tags": []
+    },
+    "profile-data-access": {
+      "tags": []
+    },
+    "shared-ui-layout": {
+      "tags": []
+    },
+    "api-user-profile": {
+      "tags": []
+    },
+    "profile-ui-search": {
+      "tags": []
+    },
+    "profile-domain": {
+      "tags": []
+    },
+    "shared-ui-spinner": {
+      "tags": []
+    },
+    "shared-util-math": {
+      "tags": []
+    },
+    "shared-util-error": {
+      "tags": []
+    },
+    "shared-ui-error": {
+      "tags": []
+    },
+    "profile-feature-shell": {
+      "tags": []
+    },
+    "auth-feature-login": {
+      "tags": []
+    },
+    "auth-feature-shell": {
+      "tags": []
+    },
+    "auth-util-jwt": {
+      "tags": []
+    },
+    "shared-feature-header": {
+      "tags": []
+    },
+    "shared-feature-versioning": {
+      "tags": []
+    }
+  }
+}
