@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  margin-top: 2.4rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  > a {
+    text-decoration: none;
+  }
+}
+
+.mat-card {
+  display: flex;
+}
+
+img {
+  max-width: 200px;
+  margin-right: 1.6rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .mat-icon {
+    margin-right: 0.4rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}

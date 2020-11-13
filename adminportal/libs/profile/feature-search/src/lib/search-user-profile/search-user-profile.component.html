@@ -1,0 +1,11 @@
+<hutch-profile-search-form
+  (searchValues)="handleSearchValues($event)"
+></hutch-profile-search-form>
+
+<hutch-fetch-failure-message *ngIf="errorUserProfile$ | async"></hutch-fetch-failure-message>
+<hutch-spinner *ngIf="(loadedUserProfile$ | async) === false && (errorUserProfile$ | async) == false"></hutch-spinner>
+
+<hutch-profile-search-result
+  *ngFor="let profile of allUserProfile$ | async"
+  [profile]="profile"
+></hutch-profile-search-result>

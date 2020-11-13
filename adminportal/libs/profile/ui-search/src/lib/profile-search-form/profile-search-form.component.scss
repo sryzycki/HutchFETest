@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+form {
+  display: flex;
+}
+
+.mat-form-field {
+  flex-basis: 100%;
+
+  &:last-of-type {
+    flex-shrink: 2;
+    margin-left: 1rem;
+  }
+}
