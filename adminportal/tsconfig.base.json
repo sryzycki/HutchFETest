@@ -39,7 +39,15 @@
       ],
       "@hutch/shared/feature-versioning": [
         "libs/shared/feature-versioning/src/index.ts"
-      ]
+      ],
+      "@hutch/profile/feature-details": [
+        "libs/profile/feature-details/src/index.ts"
+      ],
+      "@hutch/profile/feature-details-shell": [
+        "libs/profile/feature-details-shell/src/index.ts"
+      ],
+      "@hutch/profile/ui-player": ["libs/profile/ui-player/src/index.ts"],
+      "@hutch/fuel/ui-summary": ["libs/fuel/ui-summary/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

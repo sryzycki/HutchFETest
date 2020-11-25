@@ -1,3 +1,5 @@
+import { merge } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { UserProfileFacade } from '@hutch/profile/data-access';
@@ -15,6 +17,13 @@ export class SearchUserProfileComponent implements OnInit {
   public loadedUserProfile$ = this.userProfileFacade.loaded$;
 
   public allUserProfile$ = this.userProfileFacade.allUserProfile$;
+
+  public showSpinner$ = merge(
+    this.errorUserProfile$.pipe(map(hasError => !hasError)),
+    this.loadedUserProfile$.pipe(map(isLoaded => !isLoaded)),
+  ).pipe(
+    distinctUntilChanged(),
+  );
 
   constructor(
     private userProfileFacade: UserProfileFacade,

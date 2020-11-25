@@ -80,6 +80,18 @@
     },
     "shared-feature-versioning": {
       "tags": []
+    },
+    "profile-feature-details": {
+      "tags": []
+    },
+    "profile-feature-details-shell": {
+      "tags": []
+    },
+    "profile-ui-player": {
+      "tags": []
+    },
+    "fuel-ui-summary": {
+      "tags": []
     }
   }
 }

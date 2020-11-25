@@ -2,7 +2,7 @@
   (searchValues)="handleSearchValues($event)"
 ></hutch-profile-search-form>
 
-<hutch-spinner *ngIf="!(loadedUserProfile$ | async) && !(errorUserProfile$ | async)"></hutch-spinner>
+<hutch-spinner *ngIf="showSpinner$ | async"></hutch-spinner>
 <hutch-fetch-failure-message *ngIf="errorUserProfile$ | async"></hutch-fetch-failure-message>
 
 <hutch-profile-search-result
