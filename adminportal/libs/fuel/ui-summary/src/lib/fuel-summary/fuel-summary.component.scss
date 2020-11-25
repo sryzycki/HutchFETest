@@ -1,0 +1,43 @@
+:host {
+  display: block;
+}
+
+editable {
+  display: flex;
+  align-items: center;
+
+  button {
+    margin-left: 16px;
+  }
+
+  input {
+    align-self: stretch;
+  }
+}
+
+.mat-card {
+  padding-bottom: 0;
+  margin-bottom: 32px;
+}
+
+.hutch-list-item {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
+}
+
+.hutch-list-item__label {
+  flex-basis: 200px;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: .07272727em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.hutch-list-item__content {
+  color: #202124;
+  letter-spacing: .00625em;
+  font-size: 1rem;
+}

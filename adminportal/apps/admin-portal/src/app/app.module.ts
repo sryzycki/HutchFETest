@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import '@angular/common/locales/global/en-GB';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -6,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EDITABLE_CONFIG } from '@ngneat/edit-in-place';
 
 import { SharedUtilErrorModule } from '@hutch/shared/util-error';
 import { SharedFeatureHeaderModule } from '@hutch/shared/feature-header';
@@ -28,13 +30,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         redirectTo: 'profile',
       },
       {
-        path: 'profile',
-        loadChildren: () =>
-          import('@hutch/profile/feature-shell').then(
-            (module) => module.ProfileFeatureShellModule
-          ),
-      },
-      {
         path: 'auth',
         loadChildren: () =>
           import('@hutch/auth/feature-shell').then(
@@ -42,9 +37,23 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
           ),
       },
       {
+        path: 'profile',
+        loadChildren: () =>
+          import('@hutch/profile/feature-shell').then(
+            (module) => module.ProfileFeatureShellModule
+          ),
+      },
+      {
+        path: 'profile-details',
+        loadChildren: () =>
+          import('@hutch/profile/feature-details-shell').then(
+            (module) => module.ProfileFeatureDetailsShellModule
+          ),
+      },
+      {
         path: '**',
         component: PageNotFoundComponent,
-      }
+      },
     ]),
     StoreModule.forRoot(
       {},
@@ -63,7 +72,19 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SharedFeatureHeaderModule,
     AuthUtilJwtModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'en-GB'
+    },
+    {
+      provide: EDITABLE_CONFIG,
+      useValue: {
+        openBindingEvent: 'dblclick',
+        closeBindingEvent: 'dblclick',
+      }
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

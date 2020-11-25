@@ -1,0 +1,56 @@
+<mat-card>
+  <h1>Fuel</h1>
+
+  <div class="hutch-list-item">
+    <div class="hutch-list-item__divider"></div>
+    <div class="hutch-list-item__label">
+      Fuel increase
+    </div>
+    <div class="hutch-list-item__content">
+      Active
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="hutch-list-item">
+    <div class="hutch-list-item__label">
+      Fuel remaining
+    </div>
+    <div class="hutch-list-item__content">
+      <editable #editableFuel>
+        <ng-template viewMode>
+          6
+          <button mat-stroked-button (click)="editableFuel.displayEditMode()">Edit</button>
+        </ng-template>
+        <ng-template editMode>
+          <input editableFocusable editableOnEnter type="number" value="6">
+          <button editableOnSave mat-stroked-button color="accent">Save</button>
+          <button editableOnCancel mat-stroked-button>Cancel</button>
+        </ng-template>
+      </editable>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="hutch-list-item">
+    <div class="hutch-list-item__label">
+      Tank capacity
+    </div>
+    <div class="hutch-list-item__content">
+      10
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="hutch-list-item">
+    <div class="hutch-list-item__label">
+      Next fuel
+    </div>
+    <div class="hutch-list-item__content">
+      {{ now | date:'medium' }}
+    </div>
+  </div>
+</mat-card>

@@ -584,6 +584,112 @@
           "style": "scss"
         }
       }
+    },
+    "profile-feature-details": {
+      "projectType": "library",
+      "root": "libs/profile/feature-details",
+      "sourceRoot": "libs/profile/feature-details/src",
+      "prefix": "hutch",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/profile/feature-details/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/profile/feature-details/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "profile-feature-details-shell": {
+      "projectType": "library",
+      "root": "libs/profile/feature-details-shell",
+      "sourceRoot": "libs/profile/feature-details-shell/src",
+      "prefix": "hutch",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/profile/feature-details-shell/src/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/profile/feature-details-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "profile-ui-player": {
+      "projectType": "library",
+      "root": "libs/profile/ui-player",
+      "sourceRoot": "libs/profile/ui-player/src",
+      "prefix": "hutch",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/profile/ui-player/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/profile/ui-player/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "fuel-ui-summary": {
+      "projectType": "library",
+      "root": "libs/fuel/ui-summary",
+      "sourceRoot": "libs/fuel/ui-summary/src",
+      "prefix": "hutch",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/fuel/ui-summary/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/fuel/ui-summary/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

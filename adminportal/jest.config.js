@@ -20,5 +20,9 @@ module.exports = {
     '<rootDir>/libs/auth/util-jwt',
     '<rootDir>/libs/shared/feature-header',
     '<rootDir>/libs/shared/feature-versioning',
+    '<rootDir>/libs/profile/feature-details',
+    '<rootDir>/libs/profile/feature-details-shell',
+    '<rootDir>/libs/profile/ui-player',
+    '<rootDir>/libs/fuel/ui-summary',
   ],
 };
